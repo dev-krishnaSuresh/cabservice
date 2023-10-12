@@ -1,0 +1,30 @@
+{ "bookings":[
+{
+    "dateTime": "Sat, Jul 29, 01:20 PM",
+    "carType": "Sedan",
+    "vechicleNumber": "ABC 123 EF",
+    "status":"Cancelled",
+    "pickupPoint": "5th Cross Street, Halfway Gardens, Mid...",
+    "dropPoint": "Unit 21, San Vincenzo, Halfway Gardens...",
+    "image": ""
+},
+{
+    "dateTime": "Sat, Jul 29, 01:20 PM",
+    "carType": "Completed",
+    "vechicleNumber": "ABC 123 EF",
+    "status":"Cancelled",
+    "pickupPoint": "5th Cross Street, Halfway Gardens, Mid...",
+    "dropPoint": "Unit 21, San Vincenzo, Halfway Gardens...",
+    "image": ""
+},
+{
+    "dateTime": "Sat, Jul 29, 01:20 PM",
+    "carType": "Sedan",
+    "vechicleNumber": "ABC 123 EF",
+    "status":"Ongoing",
+    "pickupPoint": "5th Cross Street, Halfway Gardens, Mid...",
+    "dropPoint": "Unit 21, San Vincenzo, Halfway Gardens...",
+    "image": "",
+    "otp":"1234"
+}]
+}

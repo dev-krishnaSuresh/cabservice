@@ -1,0 +1,27 @@
+{
+    "bookingDetails": [
+        {
+            "pickupPoint":"5th Cross Street, Halfway Gardens, Midrand",
+            "dropPoint":"Unit 21, San Vincenzo, Halfway Gardens, Midrand",
+            "servicePerson":"Weslin Samuel",
+            "payment":"NIL",
+            "paymentCost":"R0.0",
+            "dateTime": "Sat, Jul 29, 01:20 PM",
+            "carType": "Sedan",
+            "vechicleNumber": "ABC 123 EF",
+            "status":"Cancelled"
+        },
+        {
+            "pickupPoint":"5th Cross Street, Halfway Gardens, Midrand",
+            "dropPoint":"Unit 21, San Vincenzo, Halfway Gardens, Midrand",
+            "servicePerson":"Weslin Samuel",
+            "payment":"NIL",
+            "paymentCost":"R0.0",
+            "dateTime": "Sat, Jul 29, 01:20 PM",
+            "carType": "Sedan",
+            "vechicleNumber": "ABC 123 EF",
+            "status":"Ongoing",
+            "otp":"1234"
+        }
+    ]
+}
