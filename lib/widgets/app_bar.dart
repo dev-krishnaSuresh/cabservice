@@ -2,6 +2,8 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:ontransit_app/screens/login.dart';
+import 'package:ontransit_app/screens/my_profile.dart';
 
 class HomeAppBar extends StatefulWidget {
   final Widget body;
@@ -44,8 +46,81 @@ class _HomeAppBarState extends State<HomeAppBar> {
       }
     }
 
-    print(_profileImagePath);
     double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
+
+    void showAlertDialog(BuildContext context) {
+      showDialog(
+        context: context,
+        builder: (context) {
+          return AlertDialog(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(8.0),
+            ),
+            content: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text("Do you want to"),
+                // SizedBox(height: 10.0),
+                Text(
+                  'Logout?',
+                  style: TextStyle(
+                    fontSize: 14.0,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                SizedBox(height: 20.0),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    ElevatedButton(
+                      onPressed: () {
+                        Navigator.of(context).pushNamed('/');
+                        // Add your code for 'Yes' button action here.
+                      },
+                      style: ButtonStyle(
+                        backgroundColor:
+                            MaterialStateProperty.all(Color(0xFF262626)),
+                        minimumSize:
+                            MaterialStateProperty.all(Size(100.0, 40.0)),
+                      ),
+                      child: Text(
+                        'Yes',
+                        style: TextStyle(
+                          fontSize: 12.0,
+                          color: Color(0xFFFFBB00),
+                        ),
+                      ),
+                    ),
+                    ElevatedButton(
+                      onPressed: () {
+                        Navigator.of(context).pop();
+                        // Add your code for 'No' button action here.
+                      },
+                      style: ButtonStyle(
+                        backgroundColor:
+                            MaterialStateProperty.all(Color(0xFFE1E1E1)),
+                        minimumSize:
+                            MaterialStateProperty.all(Size(100.0, 40.0)),
+                      ),
+                      child: Text(
+                        'No',
+                        style: TextStyle(
+                          fontSize: 12.0,
+                          color: Color(0xFF252525),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          );
+        },
+      );
+    }
+
+    print(_profileImagePath);
 
     return Scaffold(
       appBar: AppBar(
@@ -210,7 +285,14 @@ class _HomeAppBarState extends State<HomeAppBar> {
                               ),
                               SizedBox(height: 6.0),
                               OutlinedButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.of(context).push(
+                                    MaterialPageRoute(builder: (context) {
+                                      print('inside context');
+                                      return MyProfile();
+                                    }),
+                                  );
+                                },
                                 style: OutlinedButton.styleFrom(
                                   shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(25.0),
@@ -269,6 +351,7 @@ class _HomeAppBarState extends State<HomeAppBar> {
                 Spacer(),
                 ElevatedButton(
                   onPressed: () {
+                    showAlertDialog(context);
                     // Perform logout action here
                   },
                   style: ElevatedButton.styleFrom(

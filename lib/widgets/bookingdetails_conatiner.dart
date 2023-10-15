@@ -28,31 +28,22 @@ class _BookingDetailsContainerState extends State<BookingDetailsContainer> {
             content: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                Container(
-                  width: 100.0,
-                  height: 100.0,
+                Center(
+                    child: Container(
+                  width: width * 0.2, // Adjust the width as needed
+                  height: width * 0.2, // Adjust the height as needed
                   decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: Color(0xFFFFBB00),
+                    border: Border.all(
+                      color: Color(0xFFEEEEEE), // Border color
+                      width: 1.0, // Border width (1px)
+                    ),
+                    borderRadius: BorderRadius.circular(25.0), // Border radius
                   ),
-                  child: Center(
-                      child: Container(
-                    width: width * 0.15, // Adjust the width as needed
-                    height: width * 0.15, // Adjust the height as needed
-                    decoration: BoxDecoration(
-                      border: Border.all(
-                        color: Color(0xFFEEEEEE), // Border color
-                        width: 1.0, // Border width (1px)
-                      ),
-                      borderRadius:
-                          BorderRadius.circular(25.0), // Border radius
-                    ),
-                    child: Image.asset(
-                      'assets/images/Caution.svg', // Replace with the path to your image asset
-                      fit: BoxFit.cover, // Adjust the fit as needed
-                    ),
-                  )),
-                ),
+                  child: Image.asset(
+                    'assets/images/caution.jpg', // Replace with the path to your image asset
+                    fit: BoxFit.cover, // Adjust the fit as needed
+                  ),
+                )),
                 SizedBox(height: 10.0),
                 Text(
                   'Cancel the booking?',
@@ -67,6 +58,7 @@ class _BookingDetailsContainerState extends State<BookingDetailsContainer> {
                   children: [
                     ElevatedButton(
                       onPressed: () {
+                        Navigator.of(context).pop();
                         // Add your code for 'Yes' button action here.
                       },
                       style: ButtonStyle(
@@ -85,6 +77,7 @@ class _BookingDetailsContainerState extends State<BookingDetailsContainer> {
                     ),
                     ElevatedButton(
                       onPressed: () {
+                        Navigator.of(context).pop();
                         // Add your code for 'No' button action here.
                       },
                       style: ButtonStyle(

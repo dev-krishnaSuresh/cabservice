@@ -38,6 +38,7 @@ class _CustomFormWidgetState extends State<CustomFormSignupWidget> {
   Widget build(BuildContext context) {
     return Center(
         child: Container(
+      margin: EdgeInsets.only(top: 30),
       width: MediaQuery.of(context).size.width * 0.85,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15),

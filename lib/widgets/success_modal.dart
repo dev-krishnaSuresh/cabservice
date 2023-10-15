@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'dart:math';
-
-import 'package:ontransit_app/screens/my_bookings.dart';
 import 'package:ontransit_app/screens/my_bookings.dart';
 
 class SuccessModal extends StatefulWidget {

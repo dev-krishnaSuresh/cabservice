@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:ontransit_app/widgets/confirm_details.dart';
-import 'package:ontransit_app/widgets/map_screen.dart';
 import 'package:ontransit_app/widgets/app_bar.dart';
 
 class ConfirmBooking extends StatefulWidget {

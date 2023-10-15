@@ -15,6 +15,7 @@ dependencies:
   vector_math: ^2.1.0
   animated_rotation: ^2.0.0
   cupertino_icons: ^1.0.3
+  shared_preferences: ^2.2.2
 
 dev_dependencies:
   flutter_test:
@@ -27,4 +28,6 @@ flutter:
     - assets/bookings.json
     - assets/bookingDetails.json
     - assets/images/driver.jpeg
-    - assets/images/Caution.svg
+    - assets/images/caution.svg
+    - assets/images/caution.jpg
+    - assets/images/tick.jpg
